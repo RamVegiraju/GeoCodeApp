@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
   <title>Geocode App</title>
 </head>
-<body>
-  <div class="container">
-    <h2 id="text-center">Enter Location: </h2>
-    <form id="location-form">
-      <input type="text" id="location-input" class="form-control form-control-lg">
-      <br>
-      <button type="submit" class="btn btn-primary btn-block">Submit</button>
-    </form>
-    <div class="card-block" id="formatted-address"></div>
-    <div class="card-block" id="address-components"></div>
-    <div class="card-block" id="geometry"></div>
-  </div>
 
-  <script src="script.js"></script>
+<body>
+    <h2 id="text-center">Enter Location: </h2>
+    <textarea name="Enter your address" id="textInput" cols="30" rows="10"></textarea>
+    <button onclick="mainFunc();">Get coordinates!</button>
+    <!--
+      <input type="text" id="location-input">
+      <br>
+      <button type="submit" onsubmit="mainRes();">Submit</button>
+    <div class="card-block" id="formatted-address"></div>
+    <div class="card-block" id="address-components"></div> -->
+
+    <div id="geometry"></div>
+
 
 </body>
 </html>
