@@ -108,14 +108,14 @@ const getLatLong = function(address) {
 }
 
 
-/*
+
 function mainFunc() {
     var sampleAddress = document.getElementById("textInput").value;
     getLatLong(sampleAddress);
 
 }
 
-
+/*
 var coord = getLatLong("1600 Amphitheatre Parkway Mountain View CA");
 alert(coord);
 
