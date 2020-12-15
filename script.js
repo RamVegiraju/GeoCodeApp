@@ -1,8 +1,9 @@
-//URL encoding
+//URL encoding sample
 var sampleURL = "http://www.image.com/?username=unknown&password=unknown";
 var encodedURL = "http://www.foobar.com/foo?imageurl=" + encodeURIComponent(sampleURL);
 //console.log(sampleURL);
 
+//function to display country info HTML
 const renderCountry = function(data, className = '') {
     const countryInfo = `
     <article class="country ${className}">
@@ -21,6 +22,7 @@ const renderCountry = function(data, className = '') {
       document.getElementById("countryInfoGraph").innerHTML = countryInfo;
 };
 
+//calls REST Countries API
 const getCountryData = function(country) {
     fetch(`https://restcountries.eu/rest/v2/name/${country}`)
     .then(response => response.json(),
@@ -37,6 +39,7 @@ function searchCountries(sampCountriesList) {
     return countryList.some(item => arr2.includes(item));
 }*/
 
+//Geocoding API for coordinates and address details
 const getLatLong = function(address) {
 
     if(!address) {
@@ -95,6 +98,7 @@ const getLatLong = function(address) {
             <li class="list-group-item"><strong>Latitude</strong>: ${lat}</li>
             <li class="list-group-item"><strong>Longitude</strong>: ${long}</li>
           </ul>
+          <hr>
           <br>
           <br>
           <br>
@@ -108,7 +112,7 @@ const getLatLong = function(address) {
 }
 
 
-
+//button click
 function mainFunc() {
     var sampleAddress = document.getElementById("textInput").value;
     getLatLong(sampleAddress);
