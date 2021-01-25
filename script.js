@@ -123,7 +123,6 @@ function mainFunc() {
 var coord = getLatLong("1600 Amphitheatre Parkway Mountain View CA");
 alert(coord);
 
-getLatLong("22551 Forest Manor Drive Ashburn VA");
 getLatLong("New York, New York");
 
 
